@@ -1,0 +1,55 @@
+<center>Costumer INVOICE</center>
+<h1 style='color:red'>Tagihan sudah dibuat silahkan melakukan pembayaran</h1>
+No. $id <br>
+No. Tagihan : <?= mt_rand(100,999)?>
+tagihan : $simpananwajib <br>
+simpanan Pokok : $simpananpokok"
+
+
+
+<center>COSTUMER INVOICE</center>
+<h3 style='color:rgb(23, 23, 80)'>Tagihan sudah dibuat silahkan melakukan pembayaran</h3>
+Id_User     : $id <br>
+No. Tagihan : <h2 style='color:rgb(43, 99, 219)'>KL-$tagihanID</h2> <br><br>
+Tagihan     : <br>
+            Simpanan Pokok      : Rp $simpananpokok <br>
+            Simpanan Wajib      : Rp $simpananwajib <br>
+            Simpanan Sukarela   : Rp $simpanansukarela <br>
+            Total : Rp $total (Kode Unik : <h2 style='color:rgb(10, 10, 10)'>$tigabelakang</h2>) <br>
+            <center><h2>Jumlah yang harus dibayar</h2> </center>
+            <center><h1 style='color:red'> Rp $jumlah <h1> </center>
+            
+<center><h3>Transfer dapat dilakukan melalui Bank berikut :</h3> </center>
+<center><h3 style='color:rgb(7, 7, 7)'>a/n NASIRUDIN AHMAD</h3> </center>
+<center><h2 style='color:rgb(7, 7, 7)'>Bank Mandiri</h2> </center>
+<center><h1 style='color:rgb(7, 7, 7)'>1330014486484</h1> </center>
+
+<h1 style="text-align:center">This is heading 1</h1>
+<h2 style="text-align:left">This is heading 2</h2>
+<h3 style="text-align:right">This is heading 3</h3>
+<h4 style="text-align:justify">This is heading 4</h4>
+
+
+
+
+
+nitip
+
+ <!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"> </script>
+        <script>
+            $(".rupiah").autoNumeric('init', {
+                aSep: '.', 
+                aDec: ',',
+                aForm: true,
+                vMax: '999999999',
+                vMin: '-999999999'
+            });
+        </script> -->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="autoNumeric.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#rupiah').autoNumeric('init');
+            });
+        </script>
