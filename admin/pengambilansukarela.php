@@ -69,7 +69,7 @@ require "cek.php";
                                                 <?php
                                                 if ($data['status'] == "disetujui" ){
                                                 ?>
-                                                <a class="btn btn-danger btn-sm" id="" href="prosespersetujuanpengambilanA.php?id=<?=$data['id']?>&id_user=<?=$data['id_user']?>" role="button" ><i class="fa fa-times-circle mr-2"></i>Sudah Disetujui</a>
+                                                <a class="btn btn-danger btn-sm" id="" href="#?id=<?=$data['id']?>&id_user=<?=$data['id_user']?>" role="button" ><i class="fa fa-times-circle mr-2"></i>Sudah Disetujui</a>
                                                 
                                                 <?php } ?>
                                             </td>

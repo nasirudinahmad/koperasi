@@ -68,7 +68,7 @@ $sisa_simpanan_sukarela = (int)$total_simpanan_sukarela - (int)$jumlah;
 
 $status = "disetujui";
 
- $sql= $conn->query ("update pengambilan set status='$status', sisa_simpanan_sukarela='$sisa_simpanan_sukarela' where id='$id'");
+ $sql= $conn->query ("update pengambilan set status='$status', total_simpanan_sukarela='$total_simpanan_sukarela', sisa_simpanan_sukarela='$sisa_simpanan_sukarela' where id='$id'");
 
 
 
