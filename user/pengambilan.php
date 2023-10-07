@@ -44,13 +44,13 @@ require "cek.php";
                         <table id="table-pinjaman" class="table table-striped table-bordered table-sm" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>ID USER</th>
-                                    <th>TANGGAL</th>
-                                    <th>TOTAL SIMPANAN SUKARELA</th>
-                                    <th>AMBIL SIMPANAN SUKARELA</th>   
-                                    <th>SISA SIMPANAN SUKARELA</th> 
-                                    <th>STATUS</th>  
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">ID USER</th>
+                                    <th class="text-center">TANGGAL</th>
+                                    <th class="text-center">TOTAL SIMPANAN SUKARELA</th>
+                                    <th class="text-center">AMBIL SIMPANAN SUKARELA</th>   
+                                    <th class="text-center">SISA SIMPANAN SUKARELA</th> 
+                                    <th class="text-center">STATUS</th>  
 
 
                                 </tr>

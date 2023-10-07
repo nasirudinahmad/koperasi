@@ -44,11 +44,11 @@ require "cek.php";
                         <table id="table-pinjaman" class="table table-striped table-bordered table-sm" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>TANGGAL</th>
-                                    <th>PINJAMAN</th>
-                                    <th>LAMA PINJAMAN</th>   
-                                    <th>CICILAN PERBULAN</th>                                                                     
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">TANGGAL</th>
+                                    <th class="text-center">PINJAMAN</th>
+                                    <th class="text-center">LAMA PINJAMAN</th>   
+                                    <th class="text-center">CICILAN PERBULAN</th>                                                                     
 
                                 </tr>
                             </thead>    

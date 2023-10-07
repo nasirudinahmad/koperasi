@@ -44,14 +44,14 @@ require "cek.php";
                         <table id="table-user" class="table table-striped table-bordered table-sm" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th class="text-center">ID</th>
                                     <!-- <th>NAMA</th> -->
-                                    <th>TANGGAL</th>
-                                    <th>ANGSURAN</th>
-                                    <th>TAGIHAN ANGSURAN</th>
-                                    <th>STATUS</th>
-                                    <th>SISA LAMA ANGSURAN</th>
-                                    <th>UPLOAD BUKTI TRANSFER</th>
+                                    <th class="text-center">TANGGAL</th>
+                                    <th class="text-center">ANGSURAN</th>
+                                    <th class="text-center">TAGIHAN ANGSURAN</th>
+                                    <th class="text-center">STATUS</th>
+                                    <th class="text-center">SISA LAMA ANGSURAN</th>
+                                    <th class="text-center">UPLOAD BUKTI TRANSFER</th>
                                 </tr>
                             </thead>    
                             <tbody>
