@@ -43,12 +43,12 @@ require "cek.php";
                         <table id="table-user" class="table table-striped table-bordered table-sm" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>NAME</th>
-                                    <th>EMAIL</th>
-                                    <th>STATUS</th>
-                                    <th>ACTION</th>
-                                    <th>PASSWORD</th>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">NAME</th>
+                                    <th class="text-center">EMAIL</th>
+                                    <th class="text-center">STATUS</th>
+                                    <th class="text-center">ACTION</th>
+                                    <th class="text-center">PASSWORD</th>
                                 </tr>
                             </thead>    
                             <tbody>
