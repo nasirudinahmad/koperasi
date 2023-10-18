@@ -51,6 +51,7 @@ require "cek.php";
                                     <th class="text-center">AMBIL SIMPANAN SUKARELA</th>   
                                     <th class="text-center">SISA SIMPANAN SUKARELA</th> 
                                     <th class="text-center">STATUS</th>  
+                                    <th class="text-center">#AKSI</th> 
 
 
                                 </tr>
@@ -63,7 +64,7 @@ require "cek.php";
                                             $total2=0;
                                             $jumlah_pengambilan=0;
                                             $conn= open_db();
-                                            $sql = $conn->query("select * from pengambilan where id_user='$id_user' and status='disetujui'");
+                                            $sql = $conn->query("select * from pengambilan where id_user='$id_user'");
                                             while ($data=$sql->fetch_assoc()){
                                                 $total1 = $data['total_simpanan_sukarela'];
                                                 // $total1+=(int)$data['simpanan_sukarela'];
@@ -87,6 +88,7 @@ require "cek.php";
                                             <td>RP <?= number_format($data['jumlah_pengambilan'],'0',',','.')?></td>
                                             <td>RP <?= number_format($data['sisa_simpanan_sukarela'],'0',',','.')?></td>                                    
                                             <td><?=$data['status']?></td>
+                                            
                                         </tr>
                                     <?php } 
                                     ?>

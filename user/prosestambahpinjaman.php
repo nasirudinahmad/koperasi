@@ -50,10 +50,12 @@ require "cek.php";
 
     $sql = mysqli_query($conn, "INSERT INTO pinjaman (id_user, nama, tanggal, pinjaman_anggota, lama_pinjaman, cicilan_perbulan, status) 
     VALUES ('$id','$nama', '$tanggal', '$pinjaman1', '$lama_pinjaman', '$cicilan_perbulan2', '$status')");
+    
+    header('location:pinjaman.php?error9');
     }
 
 
-        header('location:tambahpinjaman.php?error9');
+        
 
     close_db($conn);
 ?>

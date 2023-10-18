@@ -40,12 +40,15 @@
         return false;
     }else {
 
-    $sql = mysqli_query($conn, "INSERT INTO pengambilan (id_user, nama, tgl_pengajuan, total_simpanan_sukarela, jumlah_pengambilan, sisa_simpanan_sukarela, status) 
-    VALUES ('$id','$nama', '$tanggal', '$total_simpanan_sukarela', '$pengambilan1', '$sisa_simpanan_sukarela', '$status')");
+        $sql = mysqli_query($conn, "INSERT INTO pengambilan (id_user, nama, tgl_pengajuan, total_simpanan_sukarela, jumlah_pengambilan, sisa_simpanan_sukarela, status) 
+        VALUES ('$id','$nama', '$tanggal', '$total_simpanan_sukarela', '$pengambilan1', '$sisa_simpanan_sukarela', '$status')");
+
+    header('location:pengambilan.php?error18');
     }
 
-
-        header('location:tambahpengambilan.php?error18');
+        
+    
+        
 
     close_db($conn);
 ?>

@@ -43,7 +43,7 @@ require "cek.php";
 
                         <!-- <button class="btn btn-primary" id="99" type="submit" name="proses"><i class="fa fa-paper-plane"></i> Proses</button> -->
                         
-                        <button class="btn btn-primary" id="9" type="submit" name="kirim"><i class="fa fa-paper-plane"></i> Kirim</button>
+                        <button class="btn btn-primary" id="90" type="submit" name="kirim"><i class="fa fa-paper-plane"></i> Kirim</button>
                         <a class="btn btn-secondary btn-sm"href="index.php"><i class="fa fa-home"></i> kembali</a>
                         <!-- <a href="simpanan.php" class="btn btn-secondary">Kembali</a> -->
                         
@@ -62,7 +62,7 @@ require "cek.php";
         <script src="../js/jquery.number.js"></script>
         <script>
             $('#rupiah1').number( true, 0 );
-            $('#hasil').number( true, 0 );
+            // $('#hasil').number( true, 0 );
 
         </script>
         
@@ -70,7 +70,7 @@ require "cek.php";
         <script>
         // Jika form (id=7) di submit maka (id=9) text berubah atau diganti
         $("#7").submit(function(){
-        $("#9").html("<div class='text-center'><div class='spinner-border spinner-border-sm' role='status'><span class='sr-only'>Loading...</span> </div> </div>");
+        $("#90").html("<div class='text-center'><div class='spinner-border spinner-border-sm' role='status'><span class='sr-only'>Loading...</span> </div> </div>");
         });
         </script>
        
