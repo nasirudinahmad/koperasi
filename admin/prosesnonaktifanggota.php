@@ -1,11 +1,3 @@
-<!-- <?php
-//  require "../koneksi.php";
-//  $conn= open_db();
-//  $id = $_GET['id'];
-//  $status = "pending";
-//  $sql= $conn->query ("update user set status='$status' where id='$id'");
-//  header("location: daftaruser.php");
-?> -->
 
 <?php
  require "../koneksi.php";
@@ -23,24 +15,16 @@
  $conn= open_db();
  $id = $_GET['id'];
  
-//  $id_user = $_GET['id_user'];
+
  $status = "pending";
  $sql= $conn->query ("update user set status='$status' where id='$id'");
-//  header("location: simpanananggota.php");
 
 
+//Pilih seluruh data dari user dimana id nya adalah id $id
 $sql3 = $conn->query("select * from user where id=$id");
 $row1 = mysqli_fetch_assoc($sql3);
 $nama = $row1['nama'];
 
-// $tagihan_angsuran = number_format($jumlah,0,',','.');
-
-
-
- //Pilih seluruh data dari user dimana id nya adalah id $id
-//  $sql2 = $conn->query("select * from user where id=$id_user");
-//  $row = mysqli_fetch_assoc($sql2);
-//  $nama= $row['nama'];
 //  print_r($row);
 //  die;
  $email = $row1['email'];

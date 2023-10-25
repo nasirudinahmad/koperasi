@@ -80,19 +80,43 @@ require "cek.php";
                                             <td>Rp <?=number_format($data['simpanan_sukarela'],'0',',','.')?></td>
                                             <td>Rp <?=number_format($data['tagihan_simpanan'],'0',',','.')?></td>
                                             <td><?=$data['status']?></td>
-                                            <td><form method="post" enctype="multipart/form-data" action="uploadprosessimpanan.php">
-                                            <div class="form-group row">
-                                                <div class='col-sm-8'>
-                                                <Input type="file" name="upload_simpanan" class="form-control">
-                                                </div>
+                                            <td>
+                                            <?php if($data['upload_simpanan'] != ''): ?>
+                                                
+                                                <form method="post" enctype="multipart/form-data" action="uploadprosessimpanan.php">
+                                                    <div class="form-group row">
+                                                    <div class='col-sm-6 text-center'>
+                                                    <img src="../img/<?=$data['upload_simpanan']?>" width='80' height='65' />
+                                                    </div>                                            
+                                                    <div class='col-sm-6 text-center'>
+                                                    <a class="btn btn-outline-success btn-sm" href="../img/<?=$data['upload_simpanan']?>"><i class="fa fa-eye mr-2" ></i>Lihat File</a><p></p>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </form>
+                                                
+                                            <?php else:  ?>
+                                                 
+                                                <form method="post" enctype="multipart/form-data" action="uploadprosessimpanan.php">
+                                                    <div class="form-group row">
+                                                    <div class='col-sm-6 text-center'>                                                    
+                                                    <Input type="file" name="upload_simpanan" class="form-control">
+                                                    </div>
                                                     <input type="hidden" name="id_simpanan_upload" value="<?=$data['id']?>">
-                                                <div class='col-sm-4'>
-                                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i>Upload</span>
-                                                </div>
-                                                <!-- <img src="file" id="preview" class="img-thumbnail"> -->  
-                                            </div>
-                                            </form>
-                                            </td>
+                                                    <div class='col-sm-6'>
+                                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i>Upload</span>
+                                                    </div>
+                                                    
+                                                    </div>
+                                                    </div>
+                                                    </form>                                         
+                                        
+                                                </td>
+
+                                            <?php endif
+                                            ?>
+                                                
+                                                
                                         </tr>
                                     <?php } 
                                     ?>

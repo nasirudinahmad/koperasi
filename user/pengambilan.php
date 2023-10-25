@@ -67,10 +67,8 @@ require "cek.php";
                                             $sql = $conn->query("select * from pengambilan where id_user='$id_user'");
                                             while ($data=$sql->fetch_assoc()){
                                                 $total1 = $data['total_simpanan_sukarela'];
-                                                // $total1+=(int)$data['simpanan_sukarela'];
                                                 $jumlah_pengambilan = ['jumlah_pengambilan'];
-                                                // $total2 = (int)$total1 - (int)$jumlah_pengambilan;
-                                            
+                                                
                                         ?>
 
                                         <tr>
@@ -88,6 +86,17 @@ require "cek.php";
                                             <td>RP <?= number_format($data['jumlah_pengambilan'],'0',',','.')?></td>
                                             <td>RP <?= number_format($data['sisa_simpanan_sukarela'],'0',',','.')?></td>                                    
                                             <td><?=$data['status']?></td>
+                                            <td>                                                                                              
+                                                <?php
+                                                if ($data['status'] == "pending" ){
+                                                ?>
+                                                <a class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Akan Menghapus Data Ini..!!!')" href="prosesbatalkanpengambilanA.php?id=<?=$data['id']?>&id_user=<?=$data['id_user']?>" role="button" ><i class="fas fa-user-times mr-2"></i>Batalkan</a>  
+                                                <?php } else {
+                                                ?>
+                                                <a class="btn btn-success btn-sm" href="#" role="#" ><i class="fas fa-user-check mr-2"></i>Approved</a>
+                                                
+                                                <?php } ?>
+                                            </td>
                                             
                                         </tr>
                                     <?php } 
@@ -112,25 +121,40 @@ require "cek.php";
              $("#aktif").hide();
              $("#pending").hide();
 
-            $(".btn-success").click(function(){
+            $(".btn-danger").click(function(){
                 $("#aktif").show();
                 
             });
 
-         $( document ).ready(function() {
-            var path = window.location.href;
-            if(path.indexOf('error18') >-1 ) {
-            Swal.fire({
-            title: 'Permintaan Pengambilan Simpanan Sudah Terkirim',
-            text: 'Mohon Menunggu Konfirmasi Selanjutnya',
-            icon: 'success',
-            confirmButtonText: 'OK'
-            
-        }).then(function() {
-            window.location = "pengambilan.php";
-        });
-        }
-        }); 
+            $( document ).ready(function() {
+                var path = window.location.href;
+                if(path.indexOf('error18') >-1 ) {
+                Swal.fire({
+                title: 'Permintaan Pengambilan Simpanan Sudah Terkirim',
+                text: 'Mohon Menunggu Konfirmasi Selanjutnya',
+                icon: 'success',
+                confirmButtonText: 'OK'
+                
+            }).then(function() {
+                window.location = "pengambilan.php";
+            });
+            }
+            }); 
+
+            $( document ).ready(function() {
+                var path = window.location.href;
+                if(path.indexOf('error22') >-1 ) {
+                Swal.fire({
+                title: 'Permintaan Pembatalan',
+                text: 'Permintaan Pembatalan Pengambilan Angsuran Anda Sudah Berhasil',
+                icon: 'success',
+                confirmButtonText: 'OK'
+                
+            }).then(function() {
+                window.location = "pengambilan.php";
+            });
+            }
+            }); 
         </script>
         
 
