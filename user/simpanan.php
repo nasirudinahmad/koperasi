@@ -85,13 +85,13 @@ require "cek.php";
                                                 
                                                 <form method="post" enctype="multipart/form-data" action="uploadprosessimpanan.php">
                                                     <div class="form-group row">
-                                                    <div class='col-sm-6 text-center'>
-                                                    <img src="../img/<?=$data['upload_simpanan']?>" width='80' height='65' />
-                                                    </div>                                            
-                                                    <div class='col-sm-6 text-center'>
-                                                    <a class="btn btn-outline-success btn-sm" href="../img/<?=$data['upload_simpanan']?>"><i class="fa fa-eye mr-2" ></i>Lihat File</a><p></p>
-                                                    </div>
-                                                    </div>
+                                                        <div class='col-sm-6 text-center'>
+                                                        <img src="../img/<?=$data['upload_simpanan']?>" width='60' height='45' />
+                                                        </div>                                            
+                                                        <div class='col-sm-6 text-center'>
+                                                        <a class="btn btn-outline-success btn-sm" href="../img/<?=$data['upload_simpanan']?>"><i class="fa fa-eye mr-1"></i>Lihat File</a>
+                                                        </div>
+                                                    
                                                     </div>
                                                     </form>
                                                 
@@ -99,20 +99,19 @@ require "cek.php";
                                                  
                                                 <form method="post" enctype="multipart/form-data" action="uploadprosessimpanan.php">
                                                     <div class="form-group row">
-                                                    <div class='col-sm-6 text-center'>                                                    
-                                                    <Input type="file" name="upload_simpanan" class="form-control">
-                                                    </div>
-                                                    <input type="hidden" name="id_simpanan_upload" value="<?=$data['id']?>">
-                                                    <div class='col-sm-6'>
-                                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i>Upload</span>
-                                                    </div>
+                                                        <div class='col-sm-6 text-center'>                                                    
+                                                        <Input type="file" name="upload_simpanan" class="form-control">
+                                                        </div>
+                                                        <input type="hidden" name="id_simpanan_upload" value="<?=$data['id']?>">
+                                                        <div class='col-sm-6 text-center'>
+                                                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload mr-2"></i>Upload</span>
+                                                        </div>
                                                     
-                                                    </div>
+                                                    
                                                     </div>
                                                     </form>                                         
                                         
-                                                </td>
-
+                                            </td>
                                             <?php endif
                                             ?>
                                                 
@@ -174,8 +173,8 @@ require "cek.php";
             var path = window.location.href;
             if(path.indexOf('error12') >-1 ) {
             Swal.fire({
-            title: 'Upload Bukti Transfer Simpanan Berhasil',
-            text: 'akan segera kami proses',
+            title: 'Upload Bukti Transfer',
+            text: 'Upload Bukti Transfer Simpanan Berhasil',
             icon: 'success',
             confirmButtonText: 'OK'
             

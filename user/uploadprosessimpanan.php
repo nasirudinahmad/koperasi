@@ -19,7 +19,7 @@ function upload1()
     $tmpName = $_FILES["upload_simpanan"]["tmp_name"];
 
     if ($error === 4) {
-        echo "<script>alert('Tidak ada gambar Thumbnail yang dipilih');</script>";
+        echo "<script>alert('Tidak ada file yang dipilih');</script>";
         return false;
     }
 

@@ -78,19 +78,37 @@ require "cek.php";
                                             <td>Rp <?=number_format($data['tagihan_angsuran'],'0',',','.')?></td>
                                             <td><?=$data['status']?></td>
                                             <td><?=$data['sisa_lama_pinjaman']?> Bulan</td>
-                                            <td><form method="post" enctype="multipart/form-data" action="uploadprosesangsuran.php">
-                                            <div class="form-group row">
-                                                <div class='col-sm-8'>
-                                                <Input type="file" name="upload_angsuran" class="form-control">
-                                                </div>
-                                                    <input type="hidden" name="id_angsuran_upload" value="<?=$data['id']?>">
-                                                <div class='col-sm-4'>
-                                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload"></i>Upload</span>
-                                                </div>
-                                                <!-- <img src="file" id="preview" class="img-thumbnail"> -->  
-                                            </div>
-                                            </form>
+                                            <td>
+                                                <?php if($data['upload_angsuran'] != ''): ?>
+                                                
+                                                <form method="post" enctype="multipart/form-data" action="uploadprosesangsuran.php">
+                                                    <div class="form-group row">
+                                                        <div class='col-sm-6 text-center'>
+                                                        <img src="../img/<?=$data['upload_angsuran']?>" width='60' height='45' />
+                                                        </div>                                            
+                                                        <div class='col-sm-6 text-center'>
+                                                        <a class="btn btn-outline-success btn-sm" href="../img/<?=$data['upload_angsuran']?>"><i class="fa fa-eye mr-1"></i>Lihat File</a>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                </form>
+                                                
+                                                <?php else:  ?>
+                                                <form method="post" enctype="multipart/form-data" action="uploadprosesangsuran.php">
+                                                    <div class="form-group row">
+                                                        <div class='col-sm-7'>
+                                                        <Input type="file" name="upload_angsuran" class="form-control">
+                                                        </div>
+                                                        <input type="hidden" name="id_angsuran_upload" value="<?=$data['id']?>">
+                                                        <div class='col-sm-5'>
+                                                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-upload mr-3"></i>Upload</span>
+                                                        </div>
+                                                        <!-- <img src="file" id="preview" class="img-thumbnail"> -->  
+                                                    </div>
+                                                </form>
                                             </td>
+                                            <?php endif
+                                            ?>
                                             
                                         </tr>
                                     <?php }
